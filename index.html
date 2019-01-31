@@ -11,19 +11,11 @@
     <!-- Do not add `script` tags-->
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-
-    <img src="https://i.imgur.com/g0D0zVS.png" alt="Nozama Logo" style="width:610px;height:340px;" class="nozama">
-
   </head>
   <body class="container-fluid">
-    <div class = "btn-group">
-      <button id="sign-out" class="btn btn-default">Sign Out</button>
-      <form id="index-items">
-        <fieldset>
-          <button type="submit" value="Show All Inventory" class="btn btn-default">Show All Inventory</button>
-        </fieldset>
-      </form>
-    </div>
+    <h1>nozama</h1>
+    <button id="sign-out" class="btn btn-default">Sign Out</button>
+    <button value="Show All Inventory" id="index-items" class="btn btn-default">Show All Inventory</button>
     <br>
     <br>
     <div id="auth-message"></div>
@@ -67,28 +59,6 @@
     <button type="button" class="button1" id="register">Register</button>
 
     <button type="button" class="button1" id="login-top">Login</button>
-    <!-- <form id="sign-in">
-      <fieldset>
-        <legend>Sign In</legend>
-        <input type="text" name="credentials[email]" placeholder="Email" class="forms">
-        <input type="password" name="credentials[password]" placeholder="Password" class="forms">
-        <button type="submit" value="Sign In" class="buttons">Sign In</button>
-      </fieldset>
-    </form>
-      <form class="sign-up" id="sign-up">
-        <fieldset>
-          <legend>Sign Up</legend>
-          <input type="text" name="credentials[email]" placeholder="Email" class="forms">
-          <input type="password" name="credentials[password]" placeholder="Password" class="forms">
-          <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" class="forms">
-          <button type="submit" value="Sign Up" class="buttons">Sign Up</button>
-        </fieldset>
-      </form>
-      <br> -->
-      <!-- sign out button>
-      <form>
-        <button type="button" id="sign-out" class="buttons">Sign Out</button>
-      </form> -->
     <form id="change-password" class="main-forms">
       <fieldset>
         <legend>Change Password</legend>
@@ -140,15 +110,6 @@
     </form>
     <br>
     <br>
-    <!-- see all inventory items -->
-    <!-- <form id="index-items">
-      <fieldset>
-        <legend>See all Inventory Items</legend>
-        <button type="submit" value="Show All Inventory" class="buttons">Show All Inventory</button>
-      </fieldset>
-    </form>
-    <br><br> -->
-
     <!-- delete an inventory item -->
     <form id="delete-item" class="main-forms">
       <fieldset>

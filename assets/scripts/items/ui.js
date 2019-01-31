@@ -4,7 +4,6 @@ const api = require('./api.js')
 
 const resetForms = () => {
   $('#show-item')[0].reset()
-  $('#index-items')[0].reset()
   $('#create-item')[0].reset()
   $('#delete-item')[0].reset()
   $('#update-item')[0].reset()

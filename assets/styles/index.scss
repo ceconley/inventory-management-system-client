@@ -16,12 +16,6 @@
   text-align: center;
 }
 
-.nozama {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .sign-up {
   display: block;
 }
@@ -35,8 +29,9 @@
 }
 
 body {
-  background-image: url('public/img/warehouse.jpg');
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   margin: 0;
   padding: 0;
 }
@@ -103,7 +98,28 @@ body {
   margin: 12px 0;
 }
 
-// gifs
-// (winter theme) https://media0.giphy.com/media/OJUuHrNYGniiQ/giphy.gif?cid=3640f6095c1fddb7706967525931244b
-// (space stars theme) https://media.giphy.com/media/aRZ4vTsHnyW6A/giphy.gif
-// (original dystopian) https://media.giphy.com/media/1uRnBBIqbuBXy/giphy.gif
+h1 {
+  text-align: center;
+  font-size: 96pt;
+}
+
+.btn {
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#sign-out {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  width: 100px;
+  background: none;
+  border: 1px solid #e08700;
+  color: #e08700;
+  padding: 1px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 20px 20px;
+}

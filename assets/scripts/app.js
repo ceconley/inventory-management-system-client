@@ -9,7 +9,7 @@ $(() => {
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#show-item').on('submit', itemEvents.onShowItem)
-  $('#index-items').on('submit', itemEvents.onIndexItems)
+  $('#index-items').on('click', itemEvents.onIndexItems)
   $('#create-item').on('submit', itemEvents.onCreateItem)
   $('#delete-item').on('submit', itemEvents.onDeleteItem)
   $('#update-item').on('submit', itemEvents.onUpdateItem)
