@@ -1,7 +1,6 @@
 'use strict'
 
-$('#change-password').hide()
-// $('#change-password-nav').hide()
+$('#change-password-modal').hide()
 $('#sign-out').hide()
 $('#show-item').hide()
 $('#index-items').hide()
@@ -16,29 +15,22 @@ const store = require('../store.js')
 const signUpSuccess = data => {
   $('#auth-message').text('')
   $('#auth-message').text('Signed up successfully.')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('success')
   $('.forms').val('')
 }
 
 const signUpFailure = data => {
   $('#auth-message').text('')
   $('#auth-message').text('Signed up failed....try again')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('success')
   $('.forms').val('')
 }
 
 const signInSuccess = data => {
   $('#auth-message').text('')
   store.user = data.user
-  $('#auth-message').text('Signed in successfully')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('success')
   $('#sign-in').hide()
   $('#sign-up').hide()
   $('#sign-out').show()
-  $('#change-password').show()
+  $('#change-password-modal').show()
   $('.forms').val('')
   $('#show-item').show()
   $('#index-items').show()
@@ -52,35 +44,27 @@ const signInSuccess = data => {
 const signInFailure = () => {
   $('#auth-message').text('')
   $('#auth-message').text('Error on sign in')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('failure')
   $('.forms').val('')
 }
 
 const changePasswordSuccess = data => {
   $('#auth-message').text('')
   $('#auth-message').text('Password changed successfully')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('success')
   $('.forms').val('')
 }
 
 const changePasswordFailure = () => {
   $('#auth-message').text('')
   $('#auth-message').text('Error on password change')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('failure')
   $('.forms').val('')
 }
 
 const signOutSuccess = data => {
+  store.user = null
   $('#auth-message').text('')
   $('#auth-message').text('Signed out successfully')
-  store.user = null
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('success')
   $('#sign-out').hide()
-  $('#change-password').hide()
+  $('#change-password-modal').hide()
   $('#sign-in').show()
   $('#sign-up').show()
   $('#show-item').hide()
@@ -96,8 +80,6 @@ const signOutSuccess = data => {
 const signOutFailure = () => {
   $('#auth-message').text('')
   $('#auth-message').text('Error on sign out')
-  $('#auth-message').removeClass()
-  $('#auth-message').addClass('failure')
 }
 
 module.exports = {

@@ -40,15 +40,13 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  height: 30px;
-  width: 100px;
-  background: none;
-  border: 1px solid #e08700;
-  color: #e08700;
-  padding: 1px;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 20px 20px;
+  width: 300px;
+}
+
+.buttons {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .login-box {
@@ -101,6 +99,8 @@ body {
 h1 {
   text-align: center;
   font-size: 96pt;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .btn {
@@ -122,4 +122,16 @@ h1 {
   font-size: 14px;
   cursor: pointer;
   margin: 20px 20px;
+}
+
+#smile {
+  height: 70px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-div {
+  overflow-x: auto;
 }
