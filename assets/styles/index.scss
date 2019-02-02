@@ -2,51 +2,68 @@
 @import 'color';
 @import 'theme';
 
-.results2 {
-  color: $secondary-font-color;
-  font-size: 30px;
-  padding: 10px;
-  text-align: center;
+.btn {
+  background: none;
+  border: 2px solid $font-color;
+  color: $font-color;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
 }
 
-.results3 {
-  color: $secondary-font-color;
-  font-size: 30px;
-  padding: 10px;
-  text-align: center;
+.button-auth {
+  width: 100%;
+  background: none;
+  border: 2px solid $font-color;
+  color: $font-color;
+  padding: 5px;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  margin: 12px 0;
 }
 
-.sign-up {
-  display: block;
+.buttons {
+  right: 0;
+  top: 0;
+}
+
+.buttons-logged-in {
+  background: none;
+  border: 2px solid $font-color;
+  color: $font-color;
+  font-size: 16px;  
+  cursor: pointer;
+  padding: 5px;
+  margin: 12px 0;
+}
+
+.button-div {
+  display: inline;
+  position: absolute;
+  right: 3%;
+  top: 0;
+}
+
+.close {
+  color: $secondary-background;
 }
 
 .forms {
   background: none;
-}
-
-.main-forms input {
   color: white;
 }
 
-body {
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  margin: 0;
+.header-div {
+  display: block;
+}
+
+h1 {
+  text-align: center;
+  font-size: 96pt;
+  margin-bottom: 0;
   padding: 0;
-}
-
-.button1 {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 300px;
-}
-
-.buttons {
-  position: absolute;
-  right: 0;
-  top: 0;
+  display: block;
 }
 
 .login-box {
@@ -58,19 +75,30 @@ body {
   color: white;
 }
 
+.modal-content {
+  background: $main-background-color;
+  color: $secondary-background;
+}
+
+#smile {
+  height: 70px;
+  width: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-div {
+  overflow-x: auto;
+}
+
 .textbox {
   width: 100%;
   overflow: hidden;
   font-size: 20px;
   padding: 8px 0;
   margin: 8px 0;
-  border-bottom: 1px solid #e08700;
-}
-
-.textbox i {
-  width: 26px;
-  float: left;
-  text-align: center;
+  border-bottom: 1px solid $font-color;
 }
 
 .textbox input {
@@ -84,54 +112,43 @@ body {
   margin: 0 10px;
 }
 
-.button {
-  width: 100%;
-  background: none;
-  border: 2px solid #e08700;
-  color: #e08700;
-  padding: 5px;
-  font-size: 20px;
-  font-weight: normal;
-  cursor: pointer;
-  margin: 12px 0;
-}
+@media (max-width: 768px) {
+  h1 {
+    margin-top: 20px;
+    font-size: 48pt;
+  }
 
-h1 {
-  text-align: center;
-  font-size: 96pt;
-  margin-bottom: 0;
-  padding: 0;
-}
+  .btn {
+    font-size: 12px;
+    margin: 5px;
+  }
+  
+  .button-auth {
+    font-size: 12px;
+  }
+  
+  .buttons {
+    font-size: 10px;
+  }
+  
+  .buttons-logged-in {
+    font-size: 10px;
+  }
+  
+  .main-forms {
+    font-size: 12px;
+  }
 
-.btn {
-  padding: 5px;
-  margin: 10px;
-  cursor: pointer;
-}
+  #smile {
+    height: 50px;
+    width: 130px;
+  }
 
-#sign-out {
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 30px;
-  width: 100px;
-  background: none;
-  border: 1px solid #e08700;
-  color: #e08700;
-  padding: 1px;
-  font-size: 14px;
-  cursor: pointer;
-  margin: 20px 20px;
-}
-
-#smile {
-  height: 70px;
-  width: 250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.table-div {
-  overflow-x: auto;
+  .textbox {
+    font-size: 16px;
+  }
+  
+  .textbox input {
+    font-size: 12px;
+  }
 }

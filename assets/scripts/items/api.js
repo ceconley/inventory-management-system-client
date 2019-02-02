@@ -5,7 +5,7 @@ const store = require('../store.js')
 
 const showItem = data => {
   return $.ajax({
-    url: config.apiUrl + '/items/' + $('#show-id').val(),
+    url: config.apiUrl + `/items/${store.itemId}`,
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + store.user.token

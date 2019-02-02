@@ -39,45 +39,38 @@ const indexSuccess1 = (response) => {
   const showItemsHtml = showItemsTemplate({ items: response.items })
   $('#results').empty()
   $('#results').append(showItemsHtml)
-  $('#auth-message').text('')
 }
 
 const indexFailure = () => {
   resetForms()
   $('#results-message').text('Could Not Retrieve Inventory')
-  $('#auth-message').text('')
 }
 
 const deleteSuccess = (data) => {
   resetForms()
-  $('#auth-message').text('')
   $('#results-message').text('Item Deleted Successfully')
   api.indexItemsTwo()
     .then(indexSuccess1)
+    .catch(indexFailure)
 }
 
 const deleteFailure = () => {
   resetForms()
   $('#results-message').text('Error deleting item')
   $('.forms').val('')
-  $('#auth-message').text('')
 }
 
 const updateSuccess = (data) => {
   resetForms()
-  const showItemsHtml = showOneItemTemplate({ item: data })
-  $('#results').empty()
-  $('#results').append(showItemsHtml)
   $('#results-message').text('Item successfully updated')
-  $('#auth-message').text('')
-  api.indexItemsTwo()
-    .then(indexSuccess1)
+  api.showItem()
+    .then(showSuccess)
+    .catch(showFailure)
 }
 
 const updateFailure = () => {
   resetForms()
   $('#results-message').text('Could Not Update Item')
-  $('#auth-message').text('')
 }
 
 const createSuccess = (data) => {
@@ -86,12 +79,10 @@ const createSuccess = (data) => {
   $('#results').empty()
   $('#results').append(showItemsHtml)
   $('#results-message').text('Item Successfully Created')
-  $('#auth-message').text('')
 }
 
 const createFailure = (data) => {
   $('#results-message').text('Create Item Failed')
-  $('#auth-message').text('')
   resetForms()
 }
 
