@@ -58,7 +58,7 @@ const deleteItem = data => {
 
 const updateItem = data => {
   return $.ajax({
-    url: config.apiUrl + '/items/' + $('#update-id').val(),
+    url: config.apiUrl + `/items/${store.itemId}`,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token

@@ -14,6 +14,16 @@ const onShowItem = event => {
     .catch(ui.showFailure)
 }
 
+const onShowForDeleteItem = event => {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  store.itemId = data.item.id
+  console.log(store.itemId)
+  api.showItem()
+    .then(ui.showForDeleteSuccess)
+    .catch(ui.showForDeleteFailure)
+}
+
 const onIndexItems = event => {
   event.preventDefault()
   api.indexItems()
@@ -29,9 +39,8 @@ const onCreateItem = event => {
     .catch(ui.createFailure)
 }
 
-const onDeleteItem = event => {
-  event.preventDefault()
-  const data = $('#delete-id').val()
+const onDeleteItem = () => {
+  const data = store.itemId
   api.deleteItem(data)
     .then(ui.deleteSuccess)
     .catch(ui.deleteFailure)
@@ -41,7 +50,6 @@ const onUpdateItem = event => {
   event.preventDefault()
   const data = getFormFields(event.target)
   store.itemId = data.item.id
-  console.log(store.itemId)
   api.updateItem(data)
     .then(ui.updateSuccess)
     .catch(ui.updateFailure)
@@ -49,6 +57,7 @@ const onUpdateItem = event => {
 
 module.exports = {
   onShowItem,
+  onShowForDeleteItem,
   onIndexItems,
   onCreateItem,
   onDeleteItem,

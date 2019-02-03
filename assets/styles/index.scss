@@ -49,6 +49,16 @@
   color: $secondary-background;
 }
 
+.form-row {
+  border-bottom: 2px solid $secondary-background;
+}
+
+.main-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .forms {
   background: none;
   color: white;
@@ -64,6 +74,16 @@ h1 {
   margin-bottom: 0;
   padding: 0;
   display: block;
+}
+
+#index-items {
+  text-align: center;
+  height: 40px;
+  width: 150px;
+}
+
+.item-forms {
+  width: 32%;
 }
 
 .login-box {
